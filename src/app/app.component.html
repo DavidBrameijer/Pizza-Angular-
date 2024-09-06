@@ -1,0 +1,32 @@
+<div class="border">
+
+    <h1 class="center">Welcome to {{title}}</h1>
+    <table class="center">
+        <tr>
+        <th>Item</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Vegetarain?</th>
+        <th></th>
+    </tr>
+    @for(m of menu; track $index){
+    <tr [class.soldOut]="m.soldOut === true">
+        @if(m.soldOut){
+        <td>{{m.name}}(Sold Out)</td>
+        }
+        @else {
+        <td>{{m.name}}</td>
+        }
+        <td>{{m.category}}</td>
+        <td>{{m.price}}</td>
+        @if(m.vegetarian){
+        <td>Vegetarian</td>
+        }
+        @else {
+        <td></td>
+        }
+        <td><button>Add to Order</button></td>
+    </tr>
+    }
+</table>
+    </div>

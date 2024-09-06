@@ -1,0 +1,13 @@
+.soldOut{
+    text-decoration: line-through;
+}
+
+.center{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.border{
+    border: 10px solid red;
+}
